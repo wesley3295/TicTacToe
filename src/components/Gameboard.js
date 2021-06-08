@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "../CSS/Gameboard.css";
 const Gameboard = (props) => {
-  const { turn, handleClick, resetButton } = props
+  const { turn, handleClick, resetButton, winner } = props
   return (
     <div className="gameboard">
-      <h1>Player Turn:{turn}</h1>
+      <h1 id="turn">Player Turn:{turn}</h1>
+      <h1 id="winner" style={{ display: "none" }}>Winner:{winner}</h1>
 
       <div className="gameboard__container">
         <div className="gameboard__row">
