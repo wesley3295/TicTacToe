@@ -1,0 +1,34 @@
+import React, { useState } from "react";
+import "../CSS/Gameboard.css";
+const Gameboard = (props) => {
+  const { turn, handleClick, resetButton } = props
+  return (
+    <div className="gameboard">
+      <h1>Player Turn:{turn}</h1>
+
+      <div className="gameboard__container">
+        <div className="gameboard__row">
+          <div className="gameboard__box" id="1" onClick={(e) => handleClick(e)}></div>
+          <div className="gameboard__box" id="2" onClick={(e) => handleClick(e)}></div>
+          <div className="gameboard__box" id="3" onClick={(e) => handleClick(e)}></div>
+        </div>
+
+        <div className="gameboard__row">
+          <div className="gameboard__box" id="4" onClick={(e) => handleClick(e)}></div>
+          <div className="gameboard__box" id="5" onClick={(e) => handleClick(e)}></div>
+          <div className="gameboard__box" id="6" onClick={(e) => handleClick(e)}></div>
+        </div>
+
+        <div className="gameboard__row">
+          <div className="gameboard__box" id="7" onClick={(e) => handleClick(e)}></div>
+          <div className="gameboard__box" id="8" onClick={(e) => handleClick(e)}></div>
+          <div className="gameboard__box" id="9" onClick={(e) => handleClick(e)}></div>
+        </div>
+      </div>
+      <button type="button" onClick={(e) => resetButton(e)} >Reset</button>
+
+    </div>
+  );
+};
+
+export default Gameboard;
