@@ -9,6 +9,9 @@ const Home = () => {
             <Link to="/increment">
                 <button>increment</button>
             </Link>
+            <Link to="/SWAPI">
+                <button>SWAPI</button>
+            </Link>
 
         </div>
     )
